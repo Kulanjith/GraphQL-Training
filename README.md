@@ -11,7 +11,7 @@
 
 Use Altair plugin
 
-    http://localhost:9001/graphql
+    http://localhost:8085/graphql
     
     
 Query operation
@@ -182,7 +182,7 @@ Mutation operation
            "after": "c2ltcGxlLWN1cnNvcjA="  
        }
        
-       `a cursor value should be placed after the "after"`
+       a cursor value should be placed after the "after"
 
 ## subscription operation
 
