@@ -179,12 +179,14 @@ Mutation operation
 
        {
            "first": 3,
-           "after": "c2ltcGxlLWN1cnNvcjA="  `cursor value`
+           "after": "c2ltcGxlLWN1cnNvcjA="  
        }
+       
+       `a cursor value should be placed after the "after"`
 
 ## subscription operation
 
-*  use http://localhost:8085/graphiql to test subscriptions
+*  use `http://localhost:8085/graphiql` in your browser to test subscriptions
 
           subscription {
             comments {
