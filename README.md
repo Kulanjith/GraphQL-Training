@@ -84,24 +84,24 @@ Mutation operation
 
 * query operation
 
-    query{
-        books{
-            edges{
-                cursor
-                node{
-                   id
-                   title
-                   author
+        query{
+            books{
+                edges{
+                    cursor
+                    node{
+                       id
+                       title
+                       author
+                    }
+                },
+                pageInfo{
+                      hasPreviousPage
+                      hasNextPage
+                      startCursor
+                      endCursor
                 }
-            },
-            pageInfo{
-                  hasPreviousPage
-                  hasNextPage
-                  startCursor
-                  endCursor
             }
         }
-    }
 
 
 * query output
