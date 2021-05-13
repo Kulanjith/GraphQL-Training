@@ -11,7 +11,7 @@
 
 Use Altair plugin
 
-    http://127.0.0.1:9001/graphql
+    http://localhost:9001/graphql
     
     
 Query operation
@@ -106,93 +106,93 @@ Mutation operation
 
 * query output
 
-   {
-       "data": {
-           "books": {
-               "edges": [
-                   {
-                       "cursor": "c2ltcGxlLWN1cnNvcjA=",
-                       "node": {
-                           "id": "1245",
-                           "title": "Jane Eyre",
-                           "author": "Charlot Bronte"
+       {
+           "data": {
+               "books": {
+                   "edges": [
+                       {
+                           "cursor": "c2ltcGxlLWN1cnNvcjA=",
+                           "node": {
+                               "id": "1245",
+                               "title": "Jane Eyre",
+                               "author": "Charlot Bronte"
+                           }
+                       },
+                       {
+                           "cursor": "c2ltcGxlLWN1cnNvcjE=",
+                           "node": {
+                               "id": "1285",
+                               "title": "Village By the Sea",
+                               "author": "Anita Desai"
+                           }
+                       },
+                       {
+                           "cursor": "c2ltcGxlLWN1cnNvcjI=",
+                           "node": {
+                               "id": "1259",
+                               "title": "Mother",
+                               "author": "Maximum Ghorky"
+                           }
+                       },
+                       {
+                           "cursor": "c2ltcGxlLWN1cnNvcjM=",
+                           "node": {
+                               "id": "1273",
+                               "title": "Anne Frank huis",
+                               "author": "Anne Frank"
+                           }
                        }
-                   },
-                   {
-                       "cursor": "c2ltcGxlLWN1cnNvcjE=",
-                       "node": {
-                           "id": "1285",
-                           "title": "Village By the Sea",
-                           "author": "Anita Desai"
-                       }
-                   },
-                   {
-                       "cursor": "c2ltcGxlLWN1cnNvcjI=",
-                       "node": {
-                           "id": "1259",
-                           "title": "Mother",
-                           "author": "Maximum Ghorky"
-                       }
-                   },
-                   {
-                       "cursor": "c2ltcGxlLWN1cnNvcjM=",
-                       "node": {
-                           "id": "1273",
-                           "title": "Anne Frank huis",
-                           "author": "Anne Frank"
-                       }
+                   ],
+                   "pageInfo": {
+                       "hasPreviousPage": false,
+                       "hasNextPage": false,
+                       "startCursor": "c2ltcGxlLWN1cnNvcjA=",
+                       "endCursor": "c2ltcGxlLWN1cnNvcjM="
                    }
-               ],
-               "pageInfo": {
-                   "hasPreviousPage": false,
-                   "hasNextPage": false,
-                   "startCursor": "c2ltcGxlLWN1cnNvcjA=",
-                   "endCursor": "c2ltcGxlLWN1cnNvcjM="
                }
            }
        }
-   }
 
 * paginated query operation
 
-   query($first: Int, $after: String){
-      books(first: $first, after: $after){
-          edges{
-             cursor
-                 node{
-                   id
-                   title
-                    author
-                 }
-             },
-           pageInfo{
-              hasPreviousPage
-              hasNextPage
-              startCursor
-              endCursor
-           }
+       query($first: Int, $after: String){
+          books(first: $first, after: $after){
+              edges{
+                 cursor
+                     node{
+                       id
+                       title
+                        author
+                     }
+                 },
+               pageInfo{
+                  hasPreviousPage
+                  hasNextPage
+                  startCursor
+                  endCursor
+               }
 
-     }
-   }
+         }
+       }
 
 * variables
 
-   {
-       "first": 3,
-       "after": "c2ltcGxlLWN1cnNvcjA="  `cursor value`
-   }
+       {
+           "first": 3,
+           "after": "c2ltcGxlLWN1cnNvcjA="  `cursor value`
+       }
 
 ## subscription operation
 
 *  use http://localhost:8085/graphiql to test subscriptions
 
-  subscription {
-    comments {
-      id
-      title
-      createdAt
-    }
-  }
+          subscription {
+            comments {
+              id
+              title
+              createdAt
+            }
+          }
 
 Ref : 
     
