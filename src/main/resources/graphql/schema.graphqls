@@ -1,0 +1,27 @@
+schema {
+    query: Query
+    mutation: Mutation
+}
+
+type Mutation {
+    saveLink(id: ID!, url: String!, description: String!): Boolean
+    saveComment(id: ID!, title: String, createdAt: DateTime!): Boolean
+    saveCar(id: ID!, enginePower: HosePower!):Boolean
+    saveManager(id: ID!): Boolean
+}
+type Subscription {
+   books:[Book]
+   comments: [Comment]
+}
+
+type Query {
+    books(first: Int, after: String): BookConnection @connection(for: "Book")
+    findBookList: [Book!]!
+    findLinkList: [Link!]!
+    findCommentList: [Comment!]!
+    findVehicleList: [Vehicle!]!
+    findEmployeeList:[Employee!]!
+}
+
+
+scalar DateTime

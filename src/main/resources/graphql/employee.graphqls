@@ -1,0 +1,11 @@
+interface Employee {
+    id: ID!
+}
+
+type Manager implements Employee {
+    id: ID!
+}
+
+type SE implements Employee {
+    id: ID!
+}
