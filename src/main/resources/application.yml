@@ -5,3 +5,6 @@ server:
 graphql:
   servlet:
     mapping: /graphql
+    enabled: true
+    corsEnabled: true
+    
